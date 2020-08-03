@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AI-MasKeeper</title>
+    <link href="../static/css/style1.css" rel='stylesheet' type='text/css'/>
+</head>
+<body>
+<div class="table_align">
+<table border="0">
+<tr>
+<td colspan="2" style="background-color:#27CCCC;">
+    <h1>AI-MasKeeper——家用智能口罩佩戴检测提醒系统</h1>
+</td>
+</tr>
+<tr>
+    <th rowspan="2" style="background-color:#5AE5E5	;height:500px;width:645px;">
+<!-- 显示视频流 -->
+<div>
+<img id="video" src="{{ url_for('home.video_viewer') }}">
+    </div>
+    </th>
+    <td style="height: 145px;background-color:#6fcaca;">
+    <div class="wendu" style="width:100%">
+                <!-- 显示传感器数据 -->
+        <div class="wendupng" style="width: 20%;height: auto;float: left;"><img src="../static/images/thermometer.png"/></div>
+        <div class="wendushuju" style="width: 80%;height: auto;float: left"><p>室内温度:{{ambient}}℃</p><p>您的体温:{{temp}}℃</p></div>
+
+        </div>
+        <div style="width: 100%">
+        <input type="button" class="btn" value="测量体温"
+               onclick="javascrtpt:window.location.href='{{ url_for('home.index') }}'">
+        </div>
+    </td>
+
+</tr>
+
+<tr>
+    <td>
+        <!-- 天气 -->
+<div id="he-plugin-standard"></div>
+<script>
+WIDGET = {
+  CONFIG: {
+    "layout": 2,
+    "width": "230",
+    "height": "345",
+    "background": 4,
+    "dataColor": "FFFFFF",
+    "backgroundColor": "35ABCF",
+    "language": "zh",
+    "city": "CN101021700",
+    "key": "e5c250158b87402dbcc1015750c33b2e"
+  }
+}
+</script>
+<script src="https://widget.heweather.net/standard/static/js/he-standard-common.js?v=1.1"></script>
+    </td>
+</tr>
+
+<tr>
+<td colspan="2" style="background-color:#7ac3c9;">
+        <input type="button" class="btn" value="退出系统"
+               onclick="javascrtpt:window.location.href='{{ url_for('user.logout') }}'">
+</td>
+</tr>
+</table>
+    </div>
+  <div class="div-parent">
+<style>
+.div-parent {
+width: 100%;
+background-color: rgba(170, 170, 170, 0);
+}
+.copy-rights {
+    width: fit-content;
+    height: 50px;
+    background-color: rgba(0, 127, 255, 0);
+    margin: 0 auto;  }
+</style>   
+<div class="copy-rights">
+    <p> Copyright@2020 AI-Maskers of  <a href="http://www.usst.edu.cn/" target="_blank" title="USST">USST</a>
+        </p>
+</div>
+      </div>
+</body>
+</html>
