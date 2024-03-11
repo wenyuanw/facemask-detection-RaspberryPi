@@ -85,12 +85,5 @@
 
 **如果对你有用的话，可以在Github上面给我一个小⭐哦！**
 
-> 项目GIthub地址：https://github.com/wenyuanw/AI-MasKeeper
->
-> 个人博客地址：http://www.ranw.top/
->
-> CSDN地址：https://blog.csdn.net/weixin_42651184
->
-
 
 
